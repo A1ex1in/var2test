@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.89"
-        tools:srcCompat="@sample/settings.png" />
+        app:srcCompat="@drawable/settings" />
 
     <ImageButton
         android:id="@+id/selectKeyButton"
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.89"
-        tools:srcCompat="@sample/select_key.png" />
+        app:srcCompat="@drawable/select_key" />
 
     <ImageButton
         android:id="@+id/redactProffileButton"
@@ -43,5 +43,5 @@
         app:layout_constraintStart_toEndOf="@+id/selectKeyButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.89"
-        tools:srcCompat="@sample/redact_proffile.png" />
+        app:srcCompat="@drawable/redact_proffile" />
 </androidx.constraintlayout.widget.ConstraintLayout>
