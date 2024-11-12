@@ -18,8 +18,10 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <EditText
         android:id="@+id/idPassword"
@@ -33,11 +35,20 @@
         app:layout_constraintTop_toBottomOf="@id/idLogin" />
 
     <Button
-        android:id="@+id/crossButton"
+        android:id="@+id/autorizButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Войти"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idPassword" />
+
+    <Button
+        android:id="@+id/registrationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autorizButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

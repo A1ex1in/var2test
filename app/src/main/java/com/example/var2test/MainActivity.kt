@@ -2,7 +2,6 @@ package com.example.var2test
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -15,7 +14,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var idLogin: EditText
     private lateinit var idPassword: EditText
-    private lateinit var crossButton: Button
+    private lateinit var autorizButton: Button
+    private lateinit var registrationButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,9 +29,10 @@ class MainActivity : AppCompatActivity() {
 
         idLogin = findViewById(R.id.idLogin)
         idPassword = findViewById(R.id.idPassword)
-        crossButton = findViewById(R.id.crossButton)
+        autorizButton = findViewById(R.id.autorizButton)
+        registrationButton = findViewById(R.id.registrationButton)
 
-        crossButton.setOnClickListener {
+        autorizButton.setOnClickListener {
             val login = idLogin.text.toString()
             val password = idPassword.text.toString()
 
@@ -41,9 +42,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show()
             }
-
-
         }
+
+        registrationButton.setOnClickListener {  }
+
     }
 
     private fun validateCredentials(login: String, password: String): Boolean {
