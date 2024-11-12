@@ -1,6 +1,7 @@
 package com.example.var2test
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -44,12 +45,26 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        registrationButton.setOnClickListener {  }
+        registrationButton.setOnClickListener {
+            openWebPage("https://www.google.com")
+        }
 
     }
 
     private fun validateCredentials(login: String, password: String): Boolean {
         /*для дальнейшей проверки логина и пароля*/
         return login == "admin" && password == "password"
+    }
+
+    private fun openWebPage(url: String) {
+        /*открытие встроенного браузера*/
+        val webpage: Uri = Uri.parse(url)
+        val intent = Intent(Intent.ACTION_VIEW, webpage)
+        // Проверяем, есть ли приложение, которое может обработать этот Intent
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent) // Запускаем Intent
+        } else {
+            Toast.makeText(this, "Нет браузера поумолчанию", Toast.LENGTH_SHORT).show()
+        }
     }
 }
