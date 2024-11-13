@@ -1,6 +1,7 @@
 package com.example.var2test
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.MotionEvent
@@ -42,7 +43,12 @@ class UserInterface : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
     private fun setupButton(button: ImageButton, toastMessage: String) {
         button.setOnClickListener {
-            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+            if (button == selectKeyButton) {
+                val intent = Intent(this, ListKeys::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+            }
         }
 
         button.setOnTouchListener { v, event ->
