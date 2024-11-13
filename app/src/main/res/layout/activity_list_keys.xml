@@ -12,17 +12,16 @@
         android:id="@+id/addKeyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:text="Добавить ключ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listKey" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/listKey"
-        android:layout_width="409dp"
-        android:layout_height="681dp"
+        android:layout_width="414dp"
+        android:layout_height="692dp"
+        app:layout_constraintBottom_toTopOf="@+id/addKeyButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
